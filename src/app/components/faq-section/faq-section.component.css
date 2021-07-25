@@ -1,0 +1,29 @@
+.accordion{
+    width: 79%;
+    border-radius: 12px;
+}
+
+.accordion-item{
+    color: rgba(45, 4, 83, 0.514);
+    background-color: rgba(45, 4, 83, 0.514);
+    color: white;
+}
+
+.accordion-button{
+    font-size: 20px;
+    background-color: rgba(45, 4, 83, 0.877);
+    color: white;
+}
+
+.accordion-header{
+    color: white !important;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}

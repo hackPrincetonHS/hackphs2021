@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+.header{
+    position: sticky;
+    top: 0;
+    font-family: 'Fira Code', monospace;
+}

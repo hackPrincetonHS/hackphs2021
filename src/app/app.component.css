@@ -1,0 +1,14 @@
+.myBg{
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 5500px;
+    background-position: 70% 0px;
+}
+
+.neonTitle{
+    margin-top: 10 !important;
+    width: 100%;
+    position: center center;
+    max-width: 900px;
+    margin: 0 auto;
+}

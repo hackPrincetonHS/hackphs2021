@@ -1,0 +1,6 @@
+.bg_class{
+    background-image: url(./../../../assets/Street_Sponsor_Section_revised.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1000px;
+}
