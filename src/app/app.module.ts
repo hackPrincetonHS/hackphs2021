@@ -10,6 +10,7 @@ import { RegisterFrontpageComponent } from './components/register-frontpage/regi
 import { AboutSectionComponent } from './components/about-section/about-section.component';
 import { BackgroundComponent } from './components_body1/background/background.component';
 import { FaqSectionComponent } from './components/faq-section/faq-section.component';
+import { MemberCarouselComponent } from './components/member-carousel/member-carousel.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FaqSectionComponent } from './components/faq-section/faq-section.compon
     RegisterFrontpageComponent,
     AboutSectionComponent,
     BackgroundComponent,
-    FaqSectionComponent
+    FaqSectionComponent,
+    MemberCarouselComponent
   ],
   imports: [
     BrowserModule,
