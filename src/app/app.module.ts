@@ -3,14 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TitleComponent } from './components/title/title.component';
-import { RegisterFrontpageComponent } from './components/register-frontpage/register-frontpage.component';
-import { AboutSectionComponent } from './components/about-section/about-section.component';
-import { BackgroundComponent } from './components_body1/background/background.component';
-import { FaqSectionComponent } from './components/faq-section/faq-section.component';
-import { MemberCarouselComponent } from './components/member-carousel/member-carousel.component';
+import { TitleComponent } from './title/title.component';
+import { RegisterFrontpageComponent } from './register-frontpage/register-frontpage.component';
+import { AboutSectionComponent } from './about-section/about-section.component';
+import { FaqSectionComponent } from './faq-section/faq-section.component';
+import { MemberCarouselComponent } from './member-carousel/member-carousel.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { MemberCarouselComponent } from './components/member-carousel/member-car
     TitleComponent,
     RegisterFrontpageComponent,
     AboutSectionComponent,
-    BackgroundComponent,
     FaqSectionComponent,
     MemberCarouselComponent
   ],
