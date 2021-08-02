@@ -1,5 +1,5 @@
 .myBg{
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: 5500px;
     background-position: 70% 0px;
