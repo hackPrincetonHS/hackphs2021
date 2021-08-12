@@ -16,31 +16,3 @@ body{
     max-width: 900px;
     margin: 0 auto;
 }
-
-.schedule{
-    margin-top: 10 !important;
-}
-
-.container-fluid{
-    background-color: #2E2E2E;
-    padding: 20px;
-}
-
-.container-fluid p{
-    font-size: 12px;
-    color: #FFFFFF4D;
-}
-
-.list-inline{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-footer ul li a{
-    color: #FFFFFF4D;
-    font-size: 12px;
-}
-
-footer .mb-4 .btn{
-    color: #007BFF !important;
-}
