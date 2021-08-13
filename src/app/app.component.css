@@ -16,11 +16,9 @@ body{
 }
 
 .anchor{
-    padding-top: 93px;
-}
-
-.faq{
-    padding-top: 1px;
+    display: block;
+    position: relative;
+    scroll-margin-top: 1em;
 }
 
 .neonTitle{
@@ -29,10 +27,6 @@ body{
     position: center center;
     max-width: 900px;
     margin: 0 auto;
-}
-
-.schedule{
-    margin-top: 10 !important;
 }
 
 .container-fluid{
