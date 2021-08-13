@@ -5,8 +5,14 @@ body{
 .myBg{
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 5500px;
+    min-height: 8000px;
     background-position: 70% 0px;
+}
+
+@media(max-width: 1590px){
+    .myBg{
+        background-size: contain;
+    }
 }
 
 .neonTitle{
