@@ -1,0 +1,39 @@
+.card{
+    padding-bottom: 30px;
+}
+
+div.card-body{
+    padding: 5px;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.steve{
+    object-position: 50% 80%;
+    border-radius: 50%;
+}
+
+
+.connor{
+    object-position: 50% 40%;
+    border-radius: 50%;
+}
+
+.arunima{
+    object-position: 10% 20%;
+    border-radius: 50%;
+}
+
+.julie{
+    object-position: 10% 20%;
+    border-radius: 50%;
+}
+
+.emily{
+    object-position: 10% 20%;
+    border-radius: 50%;
+}
