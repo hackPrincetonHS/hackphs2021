@@ -11,6 +11,7 @@ import { AboutSectionComponent } from './about-section/about-section.component';
 import { FaqSectionComponent } from './faq-section/faq-section.component';
 import { MemberCarouselComponent } from './member-carousel/member-carousel.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
     AboutSectionComponent,
     FaqSectionComponent,
     MemberCarouselComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,
