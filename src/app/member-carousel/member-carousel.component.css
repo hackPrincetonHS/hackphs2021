@@ -10,30 +10,30 @@ img{
     height: 200px;
     width: 200px;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .steve{
     object-position: 50% 80%;
-    border-radius: 50%;
 }
 
 
 .connor{
     object-position: 50% 40%;
-    border-radius: 50%;
 }
 
 .arunima{
     object-position: 10% 20%;
-    border-radius: 50%;
 }
 
 .julie{
     object-position: 10% 20%;
-    border-radius: 50%;
 }
 
 .emily{
     object-position: 10% 20%;
-    border-radius: 50%;
+}
+
+.frankie{
+    object-position: 80% 50%;
 }
