@@ -15,12 +15,6 @@ body{
     }
 }
 
-.anchor{
-    display: block;
-    position: relative;
-    scroll-margin-top: 1em;
-}
-
 .neonTitle{
     margin-top: 10 !important;
     width: 100%;
