@@ -15,6 +15,14 @@ body{
     }
 }
 
+.anchor{
+    padding-top: 93px;
+}
+
+.faq{
+    padding-top: 1px;
+}
+
 .neonTitle{
     margin-top: 10 !important;
     width: 100%;
