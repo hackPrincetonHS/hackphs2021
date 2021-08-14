@@ -12,6 +12,7 @@ import { FaqSectionComponent } from './faq-section/faq-section.component';
 import { MemberCarouselComponent } from './member-carousel/member-carousel.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
     FaqSectionComponent,
     MemberCarouselComponent,
     ScheduleComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

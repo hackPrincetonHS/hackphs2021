@@ -1,0 +1,10 @@
+.topBg{
+    background-image: url(./../../assets/top-final.png);
+    background-repeat: no-repeat;
+}
+
+@media(max-width: 1590px){
+    .myBg{
+        background-size: contain;
+    }
+}

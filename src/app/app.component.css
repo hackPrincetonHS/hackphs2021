@@ -2,19 +2,6 @@ body{
     margin-bottom: 0px;
 }
 
-.myBg{
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 8000px;
-    background-position: 70% 0px;
-}
-
-@media(max-width: 1590px){
-    .myBg{
-        background-size: contain;
-    }
-}
-
 .neonTitle{
     margin-top: 10 !important;
     width: 100%;
