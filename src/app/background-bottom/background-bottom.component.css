@@ -1,0 +1,5 @@
+.repeatingBg{
+    width: 99.5vw;
+    background-image: url(./../../assets/repeating-sections/selfconnectingrepeat.png);
+    background-size: contain;
+}
