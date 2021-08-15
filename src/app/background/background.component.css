@@ -1,10 +1,15 @@
+
 .topBg{
     background-image: url(./../../assets/top-final.png);
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
-@media(max-width: 1590px){
-    .myBg{
-        background-size: contain;
-    }
+
+.repeatingBg{
+    width: 100vw;
+    min-height: 700px;
+    z-index: -1;
+    background-image: url(./../../assets/repeating-sections/repeat1.png);
+    background-size: contain;
 }
