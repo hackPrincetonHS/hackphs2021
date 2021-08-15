@@ -34,8 +34,3 @@ footer ul li a{
 footer .mb-4 .btn{
     color: #007BFF !important;
 }
-
-footer{
-    z-index: -1;
-    bottom: 0;
-}

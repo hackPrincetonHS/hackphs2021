@@ -7,9 +7,9 @@
 
 
 .repeatingBg{
-    width: 100vw;
-    min-height: 700px;
     z-index: -1;
+    width: 99.5vw;
+    height: 100vh;
     background-image: url(./../../assets/repeating-sections/repeat1.png);
     background-size: contain;
 }
