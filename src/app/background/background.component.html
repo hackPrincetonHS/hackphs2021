@@ -14,6 +14,9 @@
 
         <img class="img" id="bottomBg" src="./../../assets/bottom-final.png"/>
         
+        <div *ngFor="let urls of finalImagesArray; ">
+            <img class="img" [src]="urls"/>
+        </div>
 
     </div>
     

@@ -11,11 +11,15 @@ export class BackgroundComponent implements OnInit {
 	ratio;
 	heightsMap;
 	numRepeat;
+	
+	finalImagesArray; // will contain the actual number of repeating sections we need
 
 	constructor() {
 		this.heightsMap = new Map<string, number>();
 		this.ratio=0;
 		this.numRepeat=0;
+		this.finalImagesArray = new Array<string>();
+
 
 		// THE FUNCTION BELOW WILL RUN WHENEVER CHANGE IS DETECTED
 		this.observer = new ResizeObserver(entries => {
@@ -45,8 +49,19 @@ export class BackgroundComponent implements OnInit {
 				this.numRepeat = Math.ceil(ratioTrimmed / 0.2);
 
 			}
+			
+			// numRepeat will be the amount of repeating Sections we need
 
-			// console.log(this.numRepeat); our FINAL result
+			// populating an imageArray with url to repeating sections 
+			let imageArray = ['./../../assets/repeating/rpv1.png', './../../assets/repeating/rpv2.png',
+							'./../../assets/repeating/rpv3.png', './../../assets/repeating/rpv4.png',
+							'./../../assets/repeating/rpv5.png'];
+
+			for(let i=0; i<this.numRepeat; ++i){
+				this.finalImagesArray.push(imageArray[i % 6]); // modulo 6 since we want to go(INDEX IN ARRAY, NOT Image NAME): 0->1->2->3->4->0->...
+			}
+			
+			console.log(this.finalImagesArray);
 			
 		});
 
@@ -64,7 +79,6 @@ export class BackgroundComponent implements OnInit {
 		this.observer.observe(document.querySelector("#content") as Element);
 		
 		this.observer.observe(document.querySelector("#testRepeatingBg") as Element);
-
 	}
 
 
