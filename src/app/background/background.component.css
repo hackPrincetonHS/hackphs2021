@@ -1,5 +1,5 @@
 .big-wrapper{
-    height: 100000px;
+    height: 10000px;
 }
 
 .img{
@@ -11,7 +11,4 @@
 .wrapper{
     top: 0px;
     position: absolute;
-}
-
-#testRepeatingBg{
 }
