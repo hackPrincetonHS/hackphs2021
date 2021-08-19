@@ -66,9 +66,9 @@ export class BackgroundComponent implements OnInit {
 				// numRepeat will be the amount of repeating Sections we need
 
 				// populating an imageArray with url to repeating sections 
-				let imageArray = ['./../../assets/repeating/rpv1.png', './../../assets/repeating/rpv2.png',
-								'./../../assets/repeating/rpv3.png', './../../assets/repeating/rpv4.png',
-								'./../../assets/repeating/rpv5.png'];
+				let imageArray = ['assets/repeating/rpv1.png', 'assets/repeating/rpv2.png',
+								'assets/repeating/rpv3.png', 'assets/repeating/rpv4.png',
+								'assets/repeating/rpv5.png'];
 
 				this.finalImagesArray = [];
 				for(let i=0; i<this.numRepeat; ++i){
