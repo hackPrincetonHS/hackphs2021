@@ -45,21 +45,12 @@ export class BackgroundComponent implements OnInit {
 				// content is definitely less than or equal to background height total, but add an ABS to be sure
 				this.ratio = Math.abs(totalBackgroundHeights - contentHeight) / repeatingBackgroundHeight; // hence why its named "ratio"
 				
-				// ratio = 15.5 and up, you're safe to not add any sections in
-				if(this.ratio < 15.5){ // otherwise, start adding them in
+				// ratio = 14.0 and up, you're safe to not add any sections in
+				if(this.ratio < 14.0){ // otherwise, start adding them in
 					console.log(this.ratio);
-					let ratioTrimmed:number = 15.5 - this.ratio; // trimming it down for convenience sake
+					let ratioTrimmed:number = 14.0 - this.ratio; // trimming it down for convenience sake
 					
-					if(this.ratio < 13.0){
-						if(this.ratio < 11.7){
-							this.numRepeat = Math.ceil(ratioTrimmed / 0.108);
-						}else{
-							this.numRepeat = Math.ceil(ratioTrimmed / 0.12);
-						}
-					}else{
-						// every 0.2, add a new section in
-						this.numRepeat = Math.ceil(ratioTrimmed / 0.15);
-					}
+					this.numRepeat = Math.ceil(ratioTrimmed / 0.15);
 
 				}
 				
