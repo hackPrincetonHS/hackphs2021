@@ -30,4 +30,4 @@ jobs:
         export PATH="$HOME/.npm-global/bin:$PATH"
         
     - name: Deploy to GitHub Pages
-      run: ng deploy --cname=www.hackphs.tech --name="ltgr" --email=luke.rtong@gmail.com
+      run: ng deploy --cname=www.hackphs.tech --name="Zelo-S" --email=stevethesteve990@gmail.com
