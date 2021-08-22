@@ -72,7 +72,7 @@ export class BackgroundComponent implements OnInit {
 				}
 				
 				// setting main content height:
-				this.totalImageHeight = totalBackgroundHeights + repeatingBackgroundHeight * this.finalImagesArray.length;
+				this.totalImageHeight = totalBackgroundHeights;
 				console.log(this.totalImageHeight);
 				
 				
