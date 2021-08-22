@@ -15,6 +15,8 @@ export class BackgroundComponent implements OnInit {
 	finalImagesArray: Array<string> // will contain the actual number of repeating sections we need
 	
 	totalImageHeight;
+	
+	sponsorsHeight;
 
 	constructor(private zone: NgZone) {
 		this.heightsMap = new Map<string, number>();
@@ -22,6 +24,7 @@ export class BackgroundComponent implements OnInit {
 		this.numRepeat=0;
 		this.finalImagesArray = new Array<string>();
 		this.totalImageHeight = 0;
+		this.sponsorsHeight=0;
 	}
 
 	ngOnInit(): void {
@@ -52,7 +55,7 @@ export class BackgroundComponent implements OnInit {
 				
 				// ratio = 14.0 and up, you're safe to not add any sections in
 				if(this.ratio < 14.0){ // otherwise, start adding them in
-					console.log(this.ratio);
+					//console.log(this.ratio);
 					let ratioTrimmed:number = 14.0 - this.ratio; // trimming it down for convenience sake
 					
 					this.numRepeat = Math.ceil(ratioTrimmed / 0.15);
@@ -73,7 +76,8 @@ export class BackgroundComponent implements OnInit {
 				
 				// setting main content height:
 				this.totalImageHeight = totalBackgroundHeights;
-				console.log(this.totalImageHeight);
+				this.sponsorsHeight = (totalBackgroundHeights + repeatingBackgroundHeight * this.finalImagesArray.length) * 0.53;
+				console.log("array is: " + this.finalImagesArray);
 				
 				
 			});

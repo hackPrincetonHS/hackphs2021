@@ -21,10 +21,13 @@
 
     </div>
     
-    <div class="wrapper" id="content">
-        <ng-content></ng-content>
+    <div class="wrapper" [style.top.px]="sponsorsHeight">
+        <ng-content select="[sponsors]"></ng-content>
     </div>
     
+    <div class="wrapper" id="content">
+        <ng-content select="[content]"></ng-content>
+    </div>
     
     
 </div>
