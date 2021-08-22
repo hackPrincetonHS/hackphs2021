@@ -13,12 +13,15 @@ export class BackgroundComponent implements OnInit {
 	numRepeat;
 
 	finalImagesArray: Array<string> // will contain the actual number of repeating sections we need
+	
+	totalImageHeight;
 
 	constructor(private zone: NgZone) {
 		this.heightsMap = new Map<string, number>();
 		this.ratio=0;
 		this.numRepeat=0;
 		this.finalImagesArray = new Array<string>();
+		this.totalImageHeight = 0;
 	}
 
 	ngOnInit(): void {
@@ -42,6 +45,8 @@ export class BackgroundComponent implements OnInit {
 				
 				contentHeight = this.heightsMap.get('content') as number + 800; // adding on 800 because ResizeObserver might *not be recording down margins
 				repeatingBackgroundHeight = this.heightsMap.get('testRepeatingBg') as number;
+				
+				
 				// content is definitely less than or equal to background height total, but add an ABS to be sure
 				this.ratio = Math.abs(totalBackgroundHeights - contentHeight) / repeatingBackgroundHeight; // hence why its named "ratio"
 				
@@ -66,8 +71,10 @@ export class BackgroundComponent implements OnInit {
 					this.finalImagesArray.push(imageArray[i % 6]); // modulo 6 since we want to go(INDEX IN ARRAY, NOT Image NAME): 0->1->2->3->4->0->...
 				}
 				
+				// setting main content height:
+				this.totalImageHeight = totalBackgroundHeights + repeatingBackgroundHeight * this.finalImagesArray.length;
+				console.log(this.totalImageHeight);
 				
-				console.log("Is changing: " + this.finalImagesArray.length);
 				
 			});
 		});

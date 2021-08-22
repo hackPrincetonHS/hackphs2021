@@ -9,7 +9,8 @@ body{
 }
 
 .bg-class{
-    position: static;
+    position: absolute;
+    width: 100%;
 }
 
 .sponsors{
