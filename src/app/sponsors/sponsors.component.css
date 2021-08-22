@@ -1,4 +1,7 @@
+.big-wrapper{
+    position: absolute;
+}
+
 .sponsors{
     scroll-margin-top: 93px;
-    margin-top: 215%;
 }

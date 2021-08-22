@@ -1,7 +1,24 @@
 
 body{
     margin-bottom: 0px;
+    position: relative;
+}
+
+.big-big-wrapper{
+    position: relative;
+}
+
+.bg-class{
+    position: static;
+}
+
+.sponsors{
     position: absolute;
+}
+
+footer{
+    position: relative;
+    z-index: 10;
 }
 
 .neonTitle{
