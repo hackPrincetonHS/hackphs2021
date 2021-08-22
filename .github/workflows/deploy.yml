@@ -15,12 +15,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: deps
-        run: |
-          npm ci
-          npm install -g @angular/cli
-          export PATH="$HOME/.npm-global/bin:$PATH"
-
-      - name: deploy
-        run: |
-          ng deploy --cname=www.hackphs.tech
+      - name: Deploy gh-pages
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN  }} 
+          build_configuration: development
+          base_href: /hackphs2021/  
+          deploy_branch: gh-pages 
+          angular_dist_build_folder: dist/hackphs
