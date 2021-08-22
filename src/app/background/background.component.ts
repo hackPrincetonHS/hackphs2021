@@ -35,7 +35,11 @@ export class BackgroundComponent implements OnInit {
 			this.zone.run(() => {
 				entries.forEach(entry => {
 					// getting background heights + content height and updating in map
-					this.heightsMap.set(entry.target.id, entry.contentRect.height);
+					if(entry.target.id === "for-sponsors"){
+						this.sponsorsHeight = entry.contentRect.height;
+					}else{
+						this.heightsMap.set(entry.target.id, entry.contentRect.height);
+					}
 				});
 
 				let totalBackgroundHeights:number = 0;
@@ -76,7 +80,6 @@ export class BackgroundComponent implements OnInit {
 				
 				// setting main content height:
 				this.totalImageHeight = totalBackgroundHeights;
-				this.sponsorsHeight = (totalBackgroundHeights + repeatingBackgroundHeight * this.finalImagesArray.length);
 				console.log(this.totalImageHeight + " and sponsors top of: " + this.sponsorsHeight);
 				
 				
@@ -93,6 +96,8 @@ export class BackgroundComponent implements OnInit {
 		observer.observe(document.querySelector("#content") as Element);
 		
 		observer.observe(document.querySelector("#testRepeatingBg") as Element);
+		
+		observer.observe(document.querySelector("#for-sponsors") as Element);
 
 	}
 
