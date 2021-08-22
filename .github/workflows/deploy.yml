@@ -3,10 +3,10 @@ name: GitHub pages deployment
 on:
   push:
     branches:
-      - github-actions
+      - master
   pull_request:
     branches:
-      - github-actions
+      - master
 
 jobs:
   build:
