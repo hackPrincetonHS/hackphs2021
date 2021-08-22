@@ -76,8 +76,8 @@ export class BackgroundComponent implements OnInit {
 				
 				// setting main content height:
 				this.totalImageHeight = totalBackgroundHeights;
-				this.sponsorsHeight = (totalBackgroundHeights + repeatingBackgroundHeight * this.finalImagesArray.length) * 0.53;
-				console.log("array is: " + this.finalImagesArray);
+				this.sponsorsHeight = (totalBackgroundHeights + repeatingBackgroundHeight * this.finalImagesArray.length);
+				console.log(this.totalImageHeight + " and sponsors top of: " + this.sponsorsHeight);
 				
 				
 			});
