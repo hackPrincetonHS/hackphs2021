@@ -1,3 +1,11 @@
+.big-wrapper{
+    text-align: center;
+}
+
 .sponsors{
     scroll-margin-top: 93px;
+}
+
+h1{
+    font-size: 11vw;
 }

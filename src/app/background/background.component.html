@@ -23,7 +23,9 @@
     </div>
     
     <div class="wrapper" [style.top.px]="sponsorsHeight">
-        <ng-content select="[sponsors]"></ng-content>
+        <div class="sponsors-class">
+            <ng-content select="[sponsors]"></ng-content>
+        </div> 
     </div>
     
     <div class="wrapper" id="content">
