@@ -31,9 +31,3 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: ng deploy --cname=www.hackphs.tech --name="Zelo-S" --email=stevethesteve990@gmail.com
-
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Karma Unit tests
-        run: ng test
