@@ -11,45 +11,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    
-    - name: Node 14
-      uses: actions/setup-node@v1
-      with:
-        node-version: '14.x'
-    
-    - name: Deps
-      run: |
-        npm ci
-        npm install -g @angular/cli
-        export PATH="$HOME/.npm-global/bin:$PATH"
-    
-    - name: Build
-      run: ng build --prod --sourceMap=false --base-href /hackphs2021/
-    
-    - name: Archive build
-      if: success()
-      uses: actions/upload-artifact@v1
-      with:
-        name: dist
-        path: dist
-    
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-      - name: Download build
-        uses: actions/download-artifact@v1
-        with:
-          name: dist
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist/hackphs
+        uses: actions/checkout@v2
+
+      - name: deps
+        run: |
+          npm ci
+          npm install -g @angular/cli
+          export PATH="$HOME/.npm-global/bin:$PATH"
+
+      - name: deploy
+        run: |
+          ng deploy --cname=www.hackphs.tech
