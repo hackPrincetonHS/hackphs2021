@@ -11,9 +11,27 @@ h1{
 }
 
 img{
-    padding: 60px;
+    margin: 20px;
+    width: 50%;
+    height: auto; 
 }
 
-.first{
-    display: flex;
+.block{
+    display: block;
+    width: 100vw;
+}
+
+.images-med{
+    display: inline-block;
+    max-width: 25%;
+}
+
+.images-lg{
+    display: inline-block;
+    max-width: 200%;
+}
+
+.images-sm{
+    display: inline-block;
+    max-width: 20%;
 }
