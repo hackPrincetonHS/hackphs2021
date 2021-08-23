@@ -1,5 +1,6 @@
 import { IfStmt } from '@angular/compiler';
 import { Component, ElementRef, NgZone, OnInit } from '@angular/core';
+import { isElementAccessExpression } from 'typescript';
 
 @Component({
 	selector: 'app-background',
@@ -59,7 +60,6 @@ export class BackgroundComponent implements OnInit {
 				
 				// ratio = 14.0 and up, you're safe to not add any sections in
 				if(this.ratio < 14.0){ // otherwise, start adding them in
-					//console.log(this.ratio);
 					let ratioTrimmed:number = 14.0 - this.ratio; // trimming it down for convenience sake
 					
 					this.numRepeat = Math.ceil(ratioTrimmed / 0.15);
@@ -79,8 +79,53 @@ export class BackgroundComponent implements OnInit {
 				}
 				
 				// setting main content height:
-				this.totalImageHeight = totalBackgroundHeights;
-				console.log(this.totalImageHeight + " and sponsors top of: " + this.sponsorsHeight);
+				
+				this.totalImageHeight = totalBackgroundHeights - 1100;
+				if(this.ratio<16.3){
+					if(this.ratio < 16){
+						if(this.ratio<15.5){
+							if(this.ratio<15.0){
+								if(this.ratio<13.8){
+									if(this.ratio<13.5){
+										if(this.ratio<12.9){
+											if(this.ratio<12.08){
+												if(this.ratio<11.4){
+													if(this.ratio<10){
+														this.totalImageHeight = totalBackgroundHeights - 600;
+													}else{
+														this.totalImageHeight = totalBackgroundHeights - 800;
+													}
+												}else{
+													this.totalImageHeight = totalBackgroundHeights - 1000;
+												}
+											}else{
+												this.totalImageHeight = totalBackgroundHeights - 1200;
+											}
+										}else{
+											this.totalImageHeight = totalBackgroundHeights - 1400;
+										}
+									}else{
+										this.totalImageHeight = totalBackgroundHeights - 1700;
+									}
+								}else{
+									this.totalImageHeight = totalBackgroundHeights - 2100;
+								}
+							}	
+							else{
+								this.totalImageHeight = totalBackgroundHeights - 2000;
+							}
+						}	
+						else{
+							this.totalImageHeight = totalBackgroundHeights - 1800;
+						}
+					}else{
+						this.totalImageHeight = totalBackgroundHeights - 1700;
+					}
+				}
+				
+				console.log(this.ratio);				
+
+				console.log(this.totalImageHeight);
 				
 				
 			});
