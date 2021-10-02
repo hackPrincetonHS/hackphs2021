@@ -21,7 +21,7 @@ export class BackgroundComponent implements OnInit {
 
 	constructor(private zone: NgZone) {
 		this.heightsMap = new Map<string, number>();
-		this.ratio=0;
+		this.ratio=1;
 		this.numRepeat=0;
 		this.finalImagesArray = new Array<string>();
 		this.totalImageHeight = 0;
@@ -45,7 +45,7 @@ export class BackgroundComponent implements OnInit {
 
 				let totalBackgroundHeights:number = 0;
 				let contentHeight:number = 0;
-				let repeatingBackgroundHeight:number = 0;
+				let repeatingBackgroundHeight:number = 1;
 							
 				for(let background of this.heightsMap){
 					totalBackgroundHeights += background[1];
@@ -80,7 +80,7 @@ export class BackgroundComponent implements OnInit {
 				
 				// setting main content height:
 				
-				this.totalImageHeight = totalBackgroundHeights - 1100;
+				this.totalImageHeight = totalBackgroundHeights - 1000;
 				if(this.ratio<16.3){
 					if(this.ratio < 16){
 						if(this.ratio<15.5){
@@ -91,35 +91,35 @@ export class BackgroundComponent implements OnInit {
 											if(this.ratio<12.08){
 												if(this.ratio<11.4){
 													if(this.ratio<10){
-														this.totalImageHeight = totalBackgroundHeights - 600;
+														this.totalImageHeight = totalBackgroundHeights - 500;
 													}else{
-														this.totalImageHeight = totalBackgroundHeights - 800;
+														this.totalImageHeight = totalBackgroundHeights - 700;
 													}
 												}else{
-													this.totalImageHeight = totalBackgroundHeights - 1000;
+													this.totalImageHeight = totalBackgroundHeights - 900;
 												}
 											}else{
-												this.totalImageHeight = totalBackgroundHeights - 1200;
+												this.totalImageHeight = totalBackgroundHeights - 1100;
 											}
 										}else{
-											this.totalImageHeight = totalBackgroundHeights - 1400;
+											this.totalImageHeight = totalBackgroundHeights - 1200;
 										}
 									}else{
-										this.totalImageHeight = totalBackgroundHeights - 1700;
+										this.totalImageHeight = totalBackgroundHeights - 1500;
 									}
 								}else{
-									this.totalImageHeight = totalBackgroundHeights - 2100;
+									this.totalImageHeight = totalBackgroundHeights - 2000;
 								}
 							}	
 							else{
-								this.totalImageHeight = totalBackgroundHeights - 2000;
+								this.totalImageHeight = totalBackgroundHeights - 1900;
 							}
 						}	
 						else{
-							this.totalImageHeight = totalBackgroundHeights - 1800;
+							this.totalImageHeight = totalBackgroundHeights - 1600;
 						}
 					}else{
-						this.totalImageHeight = totalBackgroundHeights - 1700;
+						this.totalImageHeight = totalBackgroundHeights - 1500;
 					}
 				}
 				
