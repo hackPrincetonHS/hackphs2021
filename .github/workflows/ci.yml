@@ -9,10 +9,8 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout
@@ -28,6 +26,5 @@ jobs:
           npm ci
           npm install -g @angular/cli
           export PATH="$HOME/.npm-global/bin:$PATH"
-
-      - name: Deploy to GitHub Pages
-        run: ng deploy --cname=www.hackphs.tech --name="Zelo-S" --email=stevethesteve990@gmail.com
+      - name: Build
+        run: ng build --prod
