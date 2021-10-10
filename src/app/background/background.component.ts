@@ -59,12 +59,48 @@ export class BackgroundComponent implements OnInit {
 				this.ratio = Math.abs(totalBackgroundHeights - contentHeight) / repeatingBackgroundHeight; // hence why its named "ratio"
 				
 				// ratio = 14.0 and up, you're safe to not add any sections in
-				if(this.ratio < 14.0){ // otherwise, start adding them in
-					let ratioTrimmed:number = 14.0 - this.ratio; // trimming it down for convenience sake
-					
-					this.numRepeat = Math.ceil(ratioTrimmed / 0.15);
+				if(this.ratio < 15.24){ // otherwise, start adding them in
+					let ratioTrimmed:number = 15.24 - this.ratio; // trimming it down for convenience sake
+					this.numRepeat = Math.ceil(ratioTrimmed / 0.2);
+					if(this.ratio < 14.75){ // otherwise, start adding them in
+						this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 2;
+						if(this.ratio < 14.75){ // otherwise, start adding them in
+							this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 3;
+							if(this.ratio < 14.55){ // otherwise, start adding them in
+								this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 5;
+								if(this.ratio < 14.35){ // otherwise, start adding them in
+									this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 7;
+									if(this.ratio < 13.9){ // otherwise, start adding them in
+										this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 11;
+										if(this.ratio < 13.35){ // otherwise, start adding them in
+											this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 14;
+											if(this.ratio < 12.77){ // otherwise, start adding them in
+												this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 20;
+												if(this.ratio < 11.90){ // otherwise, start adding them in
+													this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 25;
+													if(this.ratio < 11.23){ // otherwise, start adding them in
+														this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 35;
+														if(this.ratio < 10.17){ // otherwise, start adding them in
+															this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 45;
+															if(this.ratio < 9.10){ // otherwise, start adding them in
+																this.numRepeat = Math.ceil(ratioTrimmed / 0.4) + 55;
+															}else{
+																this.numRepeat -= 55;
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 
 				}
+				
+				console.log("Number reapeating: " + this.numRepeat);
 				
 				// numRepeat will be the amount of repeating Sections we need
 
@@ -87,11 +123,11 @@ export class BackgroundComponent implements OnInit {
 							if(this.ratio<15.0){
 								if(this.ratio<13.8){
 									if(this.ratio<13.5){
-										if(this.ratio<12.9){
+										if(this.ratio<12.8){
 											if(this.ratio<12.08){
 												if(this.ratio<11.4){
 													if(this.ratio<10){
-														this.totalImageHeight = totalBackgroundHeights - 500;
+														this.totalImageHeight = totalBackgroundHeights;
 													}else{
 														this.totalImageHeight = totalBackgroundHeights - 700;
 													}
@@ -102,7 +138,7 @@ export class BackgroundComponent implements OnInit {
 												this.totalImageHeight = totalBackgroundHeights - 1100;
 											}
 										}else{
-											this.totalImageHeight = totalBackgroundHeights - 1200;
+											this.totalImageHeight = totalBackgroundHeights + 1000;
 										}
 									}else{
 										this.totalImageHeight = totalBackgroundHeights - 1500;
@@ -125,7 +161,6 @@ export class BackgroundComponent implements OnInit {
 				
 				console.log(this.ratio);				
 
-				console.log(this.totalImageHeight);
 				
 				
 			});
