@@ -35,3 +35,9 @@ img{
     display: inline-block;
     max-width: 20%;
 }
+
+
+.images-smaller{
+    display: inline-block;
+    max-width: 15%;
+}
