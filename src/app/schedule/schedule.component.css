@@ -12,3 +12,9 @@
 .table{
     color: white;
 }
+
+#day-headers{
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+}
